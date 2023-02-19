@@ -2,16 +2,11 @@ package exercise;
 
 public class excercise11 {
 	public static void main(String[] args) {
-		final int[][] arr= {
-				{1},
-				{2,3},
-				{4,5,6},
-				{7,8,9,10}
-					
-				};
-		for(int i=0;i<arr.length;i++) {
-			for(int j=0;j<arr[i].length;j++) {
-				System.out.print(arr[i][j]+" ");
+		int n=4,k=1;
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print(k + " ");
+				k++;
 			}
 			System.out.println();
 		}
@@ -22,4 +17,4 @@ public class excercise11 {
 	
 
 }
-}
+
