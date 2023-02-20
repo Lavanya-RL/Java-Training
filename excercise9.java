@@ -1,4 +1,4 @@
-ppackage day2;
+package day2;
  class A {
     public  int hrs=10;
     private int num;
