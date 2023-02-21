@@ -3,14 +3,19 @@ package day2;
 public class excercise14 {
  public static void main(String[] args) {
 	 result obj=new result();
+	 Student obj1=obj;
+	 
+	 obj.StudentDetails("lavanya",1234);
 	 obj.totalmarkcalc(80,90,95);
 	 
 	
 }
 }
 class Student{
-	String name;
-	int rolllno;
+	
+	void StudentDetails(String name,int rollno) {
+		System.out.println("name : "+name);
+		System.out.println("regno :"+rollno);
 }
 class exam extends Student{
 	int sub1;
