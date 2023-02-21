@@ -38,6 +38,11 @@ interface stacks{
 	 for(int i = 6; i < 10; i++)
      {
          stack.push(i);
+		 if(stack.size()<stacksize) {
+	     stacksize=stacksize*2;
+	     System.out.println(stack.size());
+	     stack.push(i);
+     } 
      }
 	
 }
