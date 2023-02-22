@@ -32,7 +32,7 @@ interface stacks{
 				
 	}
 	class Dynamicstack implements stacks{
-		
+		int stacksize=5;
 	public void push(Stack<Integer> stack) {
 	// TODO Auto-generated method stub
 	 for(int i = 6; i < 10; i++)
