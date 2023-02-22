@@ -13,7 +13,7 @@ public class excercise15a {
 			
 		}
 			if(c==2) {
-			System.out.println(i+" ");
+			System.out.println(i+);
 			}
 		}
 	}
