@@ -10,7 +10,7 @@ public void mth1() {
 public void mth2() {
 	
 		try {
-			mth2();
+			int r=1/0;
 			
 			return;
 		}
