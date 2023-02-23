@@ -1,24 +1,22 @@
 package exceptionhandling4;
 import java.util.Scanner;
 public class ownexception {
-public static void main(String[] args) {
-	Scanner Scanner =new Scanner(System.in);
+public static void main(String[] args)  {
+	
 	try {
-		Human.behave("love");
+		throw new StringException("string is printed");
 	}
-	catch(Exception e) {
-		System.err.println(e);
+	catch(StringException e) {
+		System.out.println("Not a string");
+		System.out.println(e.getMessage());
+		
 	}
 	
 }
 }
-class Human{
-	public static void behave(String item) throws Exception{
-		if(item.equals("love")) {
-			System.out.println("happy");
-		}
-		else {
-			throw new Exception();
-		}
+class StringException extends Exception{
+	public StringException(String s) {
+		System.out.println("String only");
+		
 	}
 }

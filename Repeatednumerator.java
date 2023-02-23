@@ -26,7 +26,7 @@ class Division  {
          }
          
 	}
-	public void  result(int numerator,int denominator) throws Exception{
+	public void  result(int numerator,int denominator) throws ArithmeticException{
 		try {
 			int resultdiv;
 			resultdiv= numerator/denominator;

@@ -1,25 +1,24 @@
 package exceptionhandling5;
-
 import java.util.Scanner;
-
 public class Nocatch {
-public static void main(String[] args) {
-	Scanner Scanner =new Scanner(System.in);
+public static void main(String[] args) throws StringException {
+	
 	try {
-		Human.behave("love");
+		throw new StringException("string is printed");
 	}
+	finally {
+		
+	}
+	
 	
 }
 }
-class Human{
-	public static void behave(String item) throws Exception{
-		if(item.equals("love")) {
-			System.out.println("happy");
-		}
-		else {
-			throw new Exception();
-		}
+class StringException extends Exception{
+	public StringException(String s) {
+		System.out.println("String only");
+		
 	}
 }
+
 /// error is shown as
 // insert "Finally" to complete TryStatement//
