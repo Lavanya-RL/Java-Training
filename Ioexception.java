@@ -1,4 +1,4 @@
-package exceptionhandling;
+package exceptionhandling1;
 
 package exceptionhandling;
 import java.io.IOException;

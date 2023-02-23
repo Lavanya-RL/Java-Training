@@ -1,4 +1,4 @@
-package exceptionhandling;
+package exceptionhandling4;
 import java.util.Scanner;
 public class ownexception {
 public static void main(String[] args) {

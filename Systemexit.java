@@ -1,4 +1,4 @@
-package exceptionhandling;
+package exceptionhandling3;
 
 public class Systemexit {
 	public void mth1() {
