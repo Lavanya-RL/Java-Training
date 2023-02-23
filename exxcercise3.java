@@ -1,77 +1,86 @@
-package day3;
-import java.util.*;
-interface stacks{
-	public  void push(Stack<Integer> stack);
-    
-
-	public void stack_pop(Stack<Integer> stack);
-    
-}
-	class Fixedstack implements stacks{
-		
-
-		@Override
-		public void push(Stack<Integer> stack) {
-			// TO{
-	        for(int i = 0; i < 5; i++)
-	        {
-	            stack.push(i);
-	        }
-			
-		}
-
-		@Override
-		public void stack_pop(Stack<Integer> stack) {
-			for(int i = 0; i < 5; i++)
-	        {
-	            Integer y = (Integer) stack.pop();
-	            System.out.println("Static stack"+y);
-	        }
-			
-		}
-				
-	}
-	class Dynamicstack implements stacks{
-		int stacksize=5;
-	public void push(Stack<Integer> stack) {
-	// TODO Auto-generated method stub
-	 for(int i = 6; i < 10; i++)
-     {
-         stack.push(i);
-		 if(stack.size()<stacksize) {
-	     stacksize=stacksize*2;
-	     System.out.println(stack.size());
-	     stack.push(i);
-     } 
-     }
-	
+interface Stack {
+    void push(int data);
+    int pop();
 }
 
-@Override
-public void stack_pop(Stack<Integer> stack) {
-	// TODO Auto-generated method stub
-	
-	for(int i = 0; i < 5; i++)
-    {
-        Integer y = (Integer) stack.pop();
-        System.out.println("Dynamic stack"+y);
+class FixedStack implements Stack {
+    int[] stack;
+    int top = -1;
+    int size;
+
+    public FixedStack(int size) {
+        this.size = size;
+        stack = new int[size];
+    }
+
+    public void push(int data) {
+        if (top == size - 1) {
+            System.out.println("Stack is full");
+        } else {
+            stack[++top] = data;
+        }
+    }
+
+    public int pop() {
+        if (top == -1) {
+            System.out.println("Stack is empty");
+            return -1;
+        } else {
+            return stack[top--];
+        }
     }
 }
-	}
-public class exxcercise3 {
-	    
-	public static void main(String[] args) {
-		Stack<Integer> stack = new Stack<Integer>();
-		Fixedstack fs=new Fixedstack();
-		Dynamicstack ds=new Dynamicstack();
-		fs.push(stack);
-		fs.stack_pop(stack);
-		ds.push(stack);
-		ds.stack_pop(stack);
-		
-		
-		
-	}
+
+class DynamicStack implements Stack {
+    int[] stack;
+    int top;
+
+    public DynamicStack(int size) {
+        stack = new int[size];
+        top = -1;
+    }
+
+    public void push(int value) {
+        if (top == stack.length - 1) {
+            int[] newStack = new int[stack.length * 2];
+            for (int i = 0; i <= top; i++) {
+                newStack[i] = stack[i];
+            }
+            stack = newStack;
+        }
+        stack[++top] = value;
+    }
+
+    public int pop() {
+        if (top < 0) {
+            System.out.println("Stack underflow");
+            return -1;
+        }
+        return stack[top--];
+    }
 }
 
+public class Day3_3 {
+    public static void main(String[] args) {
+        FixedStack fs = new FixedStack(6);
+        DynamicStack ds = new DynamicStack(5);
 
+        for (int i = 1; i <= 6; i++) {
+            fs.push(i);
+        }
+        System.out.println("Elements in fixed stack:");
+        for (int i = 0; i < 6; i++) {
+            System.out.print(" "+fs.pop());
+        }
+
+        System.out.println();
+
+        for (int i = 1; i <= 10; i++) {
+            ds.push(i);
+        }
+        System.out.println("Elements in dynamic stack:");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(" "+ds.pop());
+        }
+    }
+}
