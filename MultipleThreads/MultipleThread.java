@@ -14,12 +14,12 @@ public static void main(String[] args) {
 	});
 executor.execute(()->{
 		
-		displaymessage.displaymsg();
+		displaymessage.displayThankyou();
 		
 	});
 executor.execute(()->{
 	
-	displaymessage.displaymsg();
+	displaymessage.displayNiceDa();
 	
 });
 
