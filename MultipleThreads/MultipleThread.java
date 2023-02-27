@@ -12,16 +12,16 @@ public static void main(String[] args) {
 		displaymessage.displaymsg();
 		
 	});
-//executor.execute(()->{
+executor.execute(()->{
 		
-	//	displaymessage.displayThankyou();
+		displaymessage.displaymsg();
 		
-	//});
-//executor.execute(()->{
+	});
+executor.execute(()->{
 	
-	//displaymessage.displayNiceDay();
+	displaymessage.displaymsg();
 	
-//});
+});
 
 }
 }
