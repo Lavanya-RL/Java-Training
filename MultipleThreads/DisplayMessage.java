@@ -1,14 +1,13 @@
 package MultipleThreads;
 
+import java.util.Scanner;
+
 public class DisplayMessage {
-       synchronized public void displaymsg() {
-    	   System.out.println("------Welcome------");
-       
-       synchronized public void displayThankyou() {
-    	   System.out.println("---Thankyou----");
-       }
-       
-      /synchronized public void displayNiceDay() {
-    	   System.out.println("----Have a nice day----");
-       }
+       synchronized public void displaymsg()  {
+    	   System.out.println("Enter message:");
+    	  Scanner scanner=new Scanner(System.in);
+    	  String value=scanner.nextLine();
+    	  System.out.println("-------"+value+"-------");
+    	  
+}
 }

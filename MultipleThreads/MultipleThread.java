@@ -9,19 +9,19 @@ public static void main(String[] args) {
 	DisplayMessage displaymessage=new DisplayMessage();
 	executor.execute(()->{
 		
-		displaymessage.displaymsg();
+			displaymessage.displaymsg();
+		
 		
 	});
 executor.execute(()->{
-		
-		displaymessage.displayThankyou();
-		
-	});
-executor.execute(()->{
-	
-	displaymessage.displayNiceDa();
-	
+	displaymessage.displaymsg();
 });
+	
+executor.execute(()->{
+	displaymessage.displaymsg();
+	
+	
+});executor.shutdown();
 
 }
 }
