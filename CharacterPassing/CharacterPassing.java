@@ -1,28 +1,58 @@
 package CharacterPassing;
 
 import java.util.Scanner;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class CharacterPassing  {
-	static int count=0;
+	
 	public static void main(String[] args)throws Exception   {
 		while(true) {	
 			System.out.println("Enter value:");
 		Scanner scanner=new Scanner(System.in);
-		char value=scanner.next().charAt(0);
+		String value=scanner.nextLine();
 		countLetter(value);
 				
 		}
+	}
+	
+ public static  void countLetter(String c) throws NonalphabeticException {
+	//boolean result=false;
+	int n=c.length();
+	//int res=0;
+	int count=0;
+		for(int i=0;i<n;i++) {
+			// System.out.println(n);
+		try {
+			 if(Character.isLetter(c.charAt(i))) {
+	    		count++;
+	    		
+	    		}
+			 else {
+				 throw new NonalphabeticException();
+			 }
+		}catch(NonalphabeticException e) {
+			System.out.println(e);
+			continue;
 		}
-	public static  void countLetter(char c) throws Exception{
-    	if(Character.isLetter(c)) {
-    		count++;
-    		System.out.println(count);
-    		
-    	}else {
-    		throw new Exception(c+"is not letter");
-    		
-    	}
-}
-}
+			 
+			 }
+		System.out.println(count);
+			 
+			
+			 }
+		
+		
+		 
+		
+ }
+
+
+
+ 
+		 
+
+
+	
+
