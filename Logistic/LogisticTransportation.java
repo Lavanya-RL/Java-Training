@@ -45,7 +45,9 @@ class Destination{
 			int dist2=speed*8;
 			if(dayofyear==1 || dayofyear==26 || dayofyear==227 || day.equals("SUNDAY") || (dayofmonth>7 && dayofmonth<=14)) {
 			   
-			}else {
+			}if((day.equals("SATURDAY")) && (dayofmonth>7 && dayofmonth<=14 )) {
+				}
+			else {
 				date=date.plusDays(1);
 				Time=Time.plusHours(8);
 				
