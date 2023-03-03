@@ -7,11 +7,9 @@ private Canteen1() {
 		}
 	
 	private static Canteen1 canteen;
-	synchronized public static Canteen1 createInstance() {
+    public static Canteen1 createInstance() {
 		if(canteen==null) {
 			canteen=new Canteen1();
-			try {Thread.sleep(1000);}catch(Exception e) {}
-			
 			return canteen;
 			
 		}

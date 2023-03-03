@@ -11,12 +11,12 @@ public class VisitorPattern {
 				baby.playWithDog(tiger, item);
 			}
 		}
-		class Child{
-			public void playWithDog(Dog dog,String item) {
+class Child{
+   public void playWithDog(Dog dog,String item) {
 				try {
 					dog.play(item);
 				}catch(DogExceptions dee) {
-					dee.printStackTrace();
+					//dee.printStackTrace();
 					dee.visit();
 				}
 				}
@@ -33,7 +33,7 @@ abstract class Handler911{
 			
 		}
 class Handler911Impl extends Handler911{
-public void handle(DogBiteException dbe) {
+     public void handle(DogBiteException dbe) {
        System.out.println("take him to hospital........");
 			}
 			}
