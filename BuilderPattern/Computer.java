@@ -3,7 +3,7 @@ package BuilderPattern;
 import BuilderPattern.Computer.BuildComputer;
 import BuilderPattern.Computer.Cabinet;
 class Computer{
-	class Cabinet{
+	class Cabinet{ //cabinet as inner class for access from computer
 			String motherboard,ram,harddisk,vgacard,ssd;
 			public Cabinet(String motherboard,String ram,String harddisk,String vgacard,String ssd) {
 				this.motherboard=motherboard;
@@ -29,7 +29,7 @@ class Computer{
 	public String toString() {
 		return "Computer [c=" + c + ", brand=" + brand + "]";
 	}
-	static class BuildComputer{
+	static class BuildComputer{ //innerclass to buils computer 
 		String motherboard,ram,harddisk,vgacard,ssd;
 		public BuildComputer setMotherBoard(String motherboard) { //method for building product
 			this.motherboard=motherboard;
@@ -53,7 +53,7 @@ class Computer{
 			return this;
 		}
 		
-		public Computer build() { /// calling the build finction
+		public Computer build() { /// to build computer 
 			return new Computer(this);
 		}
 	}
