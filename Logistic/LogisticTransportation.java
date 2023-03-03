@@ -43,7 +43,7 @@ class Destination{
 		int i=0;
 		while( i<distance) {
 			int dist2=speed*8;
-			if(dayofyear==1 || dayofyear==26 || dayofyear==227 || day.equals("SUNDAY") || day.equals("SATURDAY")) {
+			if(dayofyear==1 || dayofyear==26 || dayofyear==227 || day.equals("SUNDAY") || (dayofmonth>7 && dayofmonth<=14)) {
 			   
 			}else {
 				date=date.plusDays(1);
