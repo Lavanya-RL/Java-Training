@@ -20,7 +20,7 @@ class Computer{
 	}
 	Cabinet c;
 	String brand;
-	public Computer(BuildComputer bc) {
+	public Computer(BuildComputer bc) {//method to build computer
 		c=new Cabinet(bc.motherboard,bc.ram,bc.harddisk,bc.vgacard,bc.ssd);
 		brand="shoiabcomputer";
 	}
@@ -31,7 +31,7 @@ class Computer{
 	}
 	static class BuildComputer{
 		String motherboard,ram,harddisk,vgacard,ssd;
-		public BuildComputer setMotherBoard(String motherboard) {
+		public BuildComputer setMotherBoard(String motherboard) { //method for building product
 			this.motherboard=motherboard;
 			return this;
 		}
@@ -53,7 +53,7 @@ class Computer{
 			return this;
 		}
 		
-		public Computer build() {
+		public Computer build() { /// calling the build finction
 			return new Computer(this);
 		}
 	}
