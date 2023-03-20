@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  img {
+    max-width: 100%;
+  }
+
+  .background {
+    background-image: url("./images/OneDrive_5_15-3-2023/background-image.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  .menu {
+    position: absolute;
+    width: 96px;
+    height: 96px;
+    background-color: #000;
+    top: 50px;
+  }
+
+  .menu i {
+    font-size: 50px;
+    color: #ffffff;
+    padding: 30px;
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    width: 300%;
+    height: 700%;
+    border-radius: 20px;
+    left: 20px;
+    padding: 5px;
+    background-color:#000;
+  }
+  .image{
+    padding-left: 70px;
+    padding-bottom: 10px;
+  }
+  .option{
+    display: block;
+   
+  
+  }
+  a{
+   font-size: 15px;
+   text-align: center;
+   text-decoration: none;
+   display: block;
+   color: #fff;
+  }
+  .fancy_heading {
+    position: absolute;
+    font-size: 88px;
+    font-weight: 900;
+    color: #ffffff;
+    top: 40px;
+    left: 650px;
+  }
+  .footer {
+    position: absolute;
+    font-size: 115px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-left: 600px;
+    bottom: 180px;
+  }
+  .footer1 {
+    position: absolute;
+    font-size: 150px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-left: 600px;
+    bottom: 10px;
+  }
+  .year {
+    position: absolute;
+    font-size: 70px;
+    font-weight: 500;
+    color: #ffffff;
+    top: 240px;
+    right: -204px;
+    transform: rotate(270deg);
+  }
+  .year span {
+    
+    font-size: 150px;
+    font-weight: 900;
+    color: #ffffff;
+    
+  }
+  .icons i{
+    font-size: 25px; color: #aeafad;
+    height: 50px;
+    width: 40px;
+    bottom: 2px;
+    position: absolute;
+    left: 98%;
+    left: 13px;
+    top: 10px;
+  }
+  .icons1 i{
+    font-size: 40px; color: #fff;
+    height: 50px;
+    width: 50px;
+    bottom: 2px;
+    position: absolute;
+    left: 94%;
+    bottom: 2%;
+    
+  }
+  .circle{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 97%;
+     bottom: 3%;
+ }
+  .menu:hover .dropdown {
+    display: block;
+    transform: skew(20deg,10deg);
+  }
