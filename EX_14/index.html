@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Billing Details</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css" />
+        
+    </head>
+
+    <body>
+        <header>
+            <p><img src="./images/Sirius_CDW_Cobranded.svg" alt="Sirius_CDW"/></p>
+        </header>
+        <section>
+            <form onsubmit="return formValidate();">
+                <h3>BILLING DETAILS</h3>
+                <div class="left">
+                    <label for="firstName">First Name</label> <br />
+                    <input type="text" name="firstName" id="first" />
+                    <p id="firstName"></p>
+                </div>
+
+                <div class="right">
+                    <label for="lastName">Last Name</label> <br />
+                    <input type="text"  name="lastName" id="last"/>
+                    <p id="lastName"></p>
+                </div>
+                <label for="email">Email Address</label> <br />
+                <input type="email" name="e-mail" id="email"/> <br />
+                <p id="e-mail" class="not-float"></p>
+
+                <label for="phoneNumber">Contact Number</label> <br />
+                <input type="tel" name="phoneNumber" id="phone"/> <br />
+                <p id="phoneNumber" class="not-float"></p>
+
+                <label for="pinCode">PIN Code</label> <br />
+                <input type="text" name="pinCode" id="pincode"/> <br />
+                <p id="pinCode" class="not-float"></p>
+
+                <h3>PAYMENT DETAILS</h3>
+                <label for="cardNumber">Card Number</label> <br />
+                <input type="text" name="cardNumber" id="card"/>
+                <p id="cardNumber" class="not-float"></p>
+
+                <div class="left">
+                    <label for="cardExpiry">Card Expiry (Year)</label> <br />
+                    <input type="text" name="cardExpiry" id="expiry"/>
+                    <p id="cardExpiry"></p>
+                </div>
+
+                <div class="right">
+                    <label for="cvv">CVV</label> <br />
+                    <input type="text" name="cvv" id="CVV"/>
+                    <p id="cvv"></p>
+                </div>
+                <div class="clear-fix"></div>
+
+                <input type="submit" value="COMPLETE PAYMENT">
+            </form>
+        </section>
+        <footer></footer>
+        <script src="./js/validate.js"> </script>
+    </body>
+</html>
