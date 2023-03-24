@@ -5999,20 +5999,27 @@
     "img": "http://dummyimage.com/140x111.jpg/5fa2dd/ffffff"
 }
 ];
-let output=' ';
-output+=' <div class="row">'
-
+const result=document.querySelector("#result");
+const row=document.createElement("div");
+row.setAttribute('class','row');
 for (let temp of Details){
-   output+= '<div class="card">';
-   output+= '<div>';
-   output+='<img src=" '+ temp.img+ ' "></div>';
-    output+= '<div >';
-    output+='<div>'+temp.first_name+'  '+temp.last_name+ '</div>';
-   output+='<div>'+temp.email+'</div>';
-    output+= '</div>';
-    output+='</div>'
-    
+const card=document.createElement("div");
+card.setAttribute('class','card');
+const image_div=document.createElement("div")
+const image=document.createElement("img");
+image.setAttribute('src',temp.img);
+image_div.append(image);
+card.append(image_div);
+const div=document.createElement("div");
+const first_div=document.createElement("div");
+first_div.append(temp.first_name);
+first_div.append('  ');
+first_div.append(temp.last_name);
+div.append(first_div);
+const second_div=document.createElement("div");
+second_div.append(temp.email);
+div.append(second_div);
+card.append(div);
+row.append(card);
 }
-output+='</div>';
-document.querySelector("#result").innerHTML=output;
-
+result.append(row);
