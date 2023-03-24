@@ -1,0 +1,170 @@
+$var1: #000000;
+$var2: #cecece;
+$var3: #b8e986;
+$var4: #ffffff;
+$var5: #c0c0c0;
+$var6: #2b5383;
+@mixin font_family{
+    font-family: sans-serif;
+}
+* {
+	margin: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+body {
+	background-color: $var1;
+}
+.heading {
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: inherit;
+	text-align: center;
+}
+.ImageContainer {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 90px auto 0;
+	gap: 20px;
+}
+.Image {
+	width: 25.6666%;
+}
+.logoContainer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+	align-items: center;
+	gap: 62px;
+}
+.showoff {
+	margin-left: 88px;
+	text-align: center;
+	margin-top: 65px;
+	font-family: sans-serif;
+	font-size: 40px;
+	color: $var2;
+	span {
+		font-family: sans-serif;
+		font-size: 40px;
+		color: $var3;
+	}
+}
+.logoImg {
+	text-align: center;
+	max-height: 70px;
+	img {
+		max-height: 70px;
+		max-width: 150px;
+	}
+}
+.logo {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	justify-content: center;
+	margin: 50px auto;
+}
+.line {
+    margin: 130px auto 0;
+    p {
+		display: inline-block;
+		width: 30px;
+		margin: 0 760px 12px;
+		border-bottom: 2px solid $var4;
+		border-radius: 0;
+	}
+	
+    span {
+		display: inline-block;
+		position: absolute;
+		width: 216px;
+		right: 702px;
+		border-bottom: 2px solid $var4;
+		border-radius: 0;
+	}
+}
+.Brands {
+	display: flex;
+	justify-content: center;
+	margin: 35px 0 20px 38px;
+}
+.circle {
+	display: flex;
+	height: 40px;
+	width: 40px;
+	border: 2px solid $var4;
+	border-radius: 50%;
+	margin-left: 20px;
+	justify-content: center;
+	align-items: center;
+	background-color: $var1;
+}
+.footline {
+	margin-left: 30px;
+	p {
+		@include font_family();
+		font-weight: 600;
+		color: $var4;
+		font-size: 15px;
+		text-align: center;
+	}
+}
+.sub {
+	color: $var4;
+	@include font_family();
+	font-size: 100px;
+	font-weight: 200;
+	&1 {
+		margin-top: 5px;
+		color: $var5;
+		@include font_family();
+		font-size: 100px;
+		text-align: center;
+		font-size: 50px;
+		font-weight: 600;
+		span {
+			color: $var6;
+		}
+	}
+}
+.email {
+	position: absolute;
+	right: 100px;
+	color: white;
+	@include font_family();
+	font-weight: 500;
+	font-size: 20px;
+	top: 15px;
+}
+@media screen and (max-width=480px) {
+   body{
+        width: 100%;
+        align-items: center;
+   } 
+
+.Image {
+	width: 100%;
+}
+.logoImg {
+	width: 35%;
+	margin-bottom: 20px;
+}
+.logoContainer {
+	width: 250%;
+}
+.sub {
+	margin-top: -20px;
+}
+.sub {
+	font-size: 30px ;
+}
+.showoff {
+	margin-left: 0;
+}
+.Brands {
+	margin-left: 3px;
+}
+}
