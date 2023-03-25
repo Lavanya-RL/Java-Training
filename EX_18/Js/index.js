@@ -57,6 +57,7 @@ Data={
 
 const video_prt = $("#video-part");
 const video = $("<video>");
+video.attr("poster", 'poster.jpeg');
 video.attr("src", Data.videoUrl);
 video.attr("type", "video/mp4");
 video.attr("controls", true);

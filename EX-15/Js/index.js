@@ -57,6 +57,8 @@ Data={
 // console(Data.videoUrl);
 const video_prt=document.querySelector("#video-part");
 const video=document.createElement("video");
+// const source=document.createElement("source")
+video.setAttribute('poster','poster.jpeg');
 video.setAttribute('src',Data.videoUrl);
 video.setAttribute('type','video/mp4');
 video.setAttribute('controls','true');
