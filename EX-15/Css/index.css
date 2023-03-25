@@ -6,7 +6,7 @@
 header{
 background-color:#ffffff;
 width: 100%;
-height: 20px;
+height: 50px;
 position: sticky;
 top: 0;
 
@@ -125,10 +125,38 @@ footer div:last-child{
     padding-right :200px; ;
     padding-top: 15px;
 }
-@media screen and (min-width: 480px){
+.icon{
+   
+    position:  fixed;
+    bottom: 30px;
+    /* width: 50%; */
+    
+}
+@media screen and (max-width: 800px){
+     body{
+        flex:none;
+        width: 100%;
+    } 
     main{
         flex-direction: column;
+        align-items: center;
+        width: 80%;
+        
     }
-}
+    .comment-part{
+        width: 100%;
+    }
+    .comments-img {
+        width: 100%;
+
+    }
+    .comments-info{
+        width: 100%;
+        padding-left: 30px;
+    }
+    .poster-part{
+        width: 100%;
+    }
+} 
 
 
